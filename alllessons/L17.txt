@@ -1,0 +1,30 @@
+Lesson 17
+
+select * from recyclebin
+select * from dictionary -- contine info despre tabelele de system--
+where upper (table_name) like '%EMP%'
+
+
+select *from user_objects
+where object_name='EMPLOYEES'
+
+select *from user_tables
+where table_name = 'EMPLOYEES'
+
+select *from user_tab_columns
+where table_name = 'EMPLOYEES'
+
+select * from DBA_TABLES
+
+select *from all_tables
+
+select *from all_tab_columns
+where table_name = 'EMPLOYEES'
+
+select * from user_tables
+rollback
+
+select * from sys.user_tables
+
+
+select * from user_cons_columns

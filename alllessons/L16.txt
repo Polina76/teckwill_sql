@@ -1,0 +1,13 @@
+Lesson 16
+
+create table test1_employees
+as select *
+from 
+select *
+from test1_employees
+
+daca facem comanda drop table ea mai poate fi restabilita-- 
+se restabileste din tabelul reciclebin--
+
+
+daca facem comanda drop table purge atunci nu o mai restabilesti--

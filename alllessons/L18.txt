@@ -1,0 +1,11 @@
+Lesson 18
+
+schema-segment fizic din baza de date, mai multe segmente, schema poate fi si un user--
+
+select * from ora01.lands_v
+
+create or replace view lands_v(id,name,reg_id)
+as select * from lands_v
+
+update lands_v set ID ='MD'
+

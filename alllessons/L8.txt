@@ -1,0 +1,35 @@
+Lesson 8
+
+select last_name, hire_date
+from employees
+where hire_date > to_date('May 24, 2015', 'fxMonth DD, YYYY')
+
+select * 
+from employees
+where employee_id > to_number('150.00')
+
+select * 
+from employees
+where employee_id > ('150.00')
+
+select * 
+from employees
+where employee_id > 150
+
+select last_name, hire_date
+from employees
+where hire_date < to_date(to_char(sysdate,'DD.MM.YYYY'),'DD.MM.YYYY')
+
+select '10'+10
+from employees
+
+select 
+last_name
+,salary
+,commission_pct 
+,NVL2(commission_pct,10,0)
+,commission_pct + 10
+,NVL(commission_pct,0) + 10
+,(salary'12) + (salary'12'NVL(commission_pct,0)) an_sal
+from employees
+

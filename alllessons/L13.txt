@@ -1,0 +1,80 @@
+Lesson 13
+
+select last_name,hire_date
+from employees
+where hire_date<(select hire_date 
+from employees
+where last_name='Davies')
+
+
+select last_name,hire_date
+from employees
+where hire_date>(select hire_date 
+from employees
+where last_name='Davies')
+
+select last_name,hire_date
+from employees
+where hire_date<>(select hire_date 
+from employees
+where last_name='Davies')
+
+select *
+from employees
+where job_id In(select job_id
+from employees
+where salary>5000)
+
+and phone_number in(select phone_number
+from employees
+where phone_number like'515%')
+
+select last_name, job_id
+from employees
+where job_id =(select job_id
+from employees
+where employee_id=141)
+
+select last_name, job_id, salary
+from employees
+where salary =(select MIN(salary)
+from employees)
+
+
+select *
+from ad_student_attendance a
+join ad_student_details b
+on a.student_id = b.student_id 
+
+
+select b.first_name
+       ,b.student_reg_year
+       ,max(no_of_working_days - no_of_days_off) nt_attendance_days
+from ad_student_attendance a
+join ad_student_details b
+on a.student_id = b.student_id
+group by b.student_id
+having min(no_of_working_days - no_of_days_off)>(select min(no_of_working_days - no_of_days_off)
+from ad_student_attendance)
+
+
+select *
+from employees
+where job_id in(select JOB_ID
+                from employees
+where last_name like'_K%')
+
+select first_name, department_id, salary
+from employees
+where (salary, department_id) IN 
+(select min(salary), department_id
+from employees
+group by department_id)
+order by 
+
+
+select *
+from employees emp
+where emp.manager_id not in(select mgr.manager_id
+from employees mgr
+where manager_id>124)

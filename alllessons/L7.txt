@@ -1,0 +1,83 @@
+--select first_name,
+--instr (first_name,'a',2,1)
+--from employees
+
+
+
+--exercitiu: de extras primul e din first name si pe ce pozitie se afla primul n care se 
+--intilneste in fist name,
+--si lungimea la numar de telefon
+
+select first_name,substr(first_name,instr(lower(first_name),'e',1,1),1)
+from employees
+
+select first_name
+,lpad(first_name,10,'*')
+,rpad(first_name,10,'+')
+--,trim(' test text ')comanda taie spatiu
+from employees
+
+select phone_number,
+trim (leading 5 from phone_number)
+from employees
+
+select phone_number,
+trim (both 5 from phone_number)
+from employees
+
+select phone_number
+,trim (both 5 from phone_number)
+,replace (phone_number,'.',' ')
+from employees
+
+--numeric functions
+
+select 
+trunc(1489.4585278, 2)
+from dual
+
+select 
+ceil(1489.4585278)
+,floor(1489.4585278)
+from dual
+
+select 
+mod (100,7)
+,mod (100,5)
+,abs(mod(-3,2))
+,mod(26.5,3)
+from dual
+
+--working with data
+
+--Select sysdate from 
+select last_name,(sysdate-hire_date)/7 as weeks
+from employees
+where department_id = 
+
+LECTIA 7--
+to_char(sysdate,yyyy)
+04.06.2018
+selectul de sus va returna 2018 (ceea ce reprezinta char)--
+
+ to_char(sysdate, 'DD.MM.YYYY') acest select returneaza data in format 04.06.2018
+ 
+ select to_char(sysdate)
+ , to_char(sysdate,'YYYY')
+  from dual
+ 
+   select to_char(sysdate)
+ , to_char(sysdate,'DD.MM.YYYY')
+ from dual
+ 
+   select to_char(sysdate)
+ , to_char(sysdate,'DD-MM-YYYY')
+ from dual
+ 
+   select to_char(sysdate)
+ , to_char(sysdate,'DD-MM-YY')
+ from dual
+ 
+   select to_char(sysdate)
+ , to_char(sysdate,'DD-MON-YYYY')
+ from dual

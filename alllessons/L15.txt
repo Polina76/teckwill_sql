@@ -1,0 +1,26 @@
+Lesson 15
+
+indexarea se face dupa chaia primara--
+indexul poate fi creat pe 1 sau m multe coloane--
+
+create table test_table(
+,colum1 number constraint test_primary_key primary key
+,coulm2 date
+,colum3 nvarchar2(15) not nul)
+
+select * from test_table
+
+create table test_table(
+,colum1 number --constraint test_primary_key primary key
+,coulm2 date
+,colum3 nvarchar2(15) not nul)
+,coulm4 varchar(10)constraint test_uniq unique)
+
+create table test_check_table(
+,colum1 number --constraint test_primary_key primary key
+,coulm2 date
+,colum3 nvarchar2(15) check (colum2='Female')
+,coulm4 varchar(10) )
+
+
+insert into test_check_table

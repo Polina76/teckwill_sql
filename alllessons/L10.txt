@@ -1,0 +1,43 @@
+Lesson 10--
+
+select avg(salary)
+,max(salary)
+,min(salary)
+,sum(salary)
+from employees
+where job_id like '%REP%'
+
+select department_id
+,avg(salary)
+from employees
+group by department_id, job_id
+
+select * from employees
+
+select department_id
+,avg(salary)
+from employees
+group by department_id, job_id
+order by department_id
+
+
+select department_id
+,avg(salary)
+from employees
+group by department_id, job_id
+having avg(salary)>5000
+
+select round(max(avg(salary)),2)
+from employees
+group by department_id
+
+select job_id 
+,count(job_id)
+from employees
+group by job_id
+havinh count(job_id)
+
+
+select job_id, job_title
+from employees
+natural join jobs

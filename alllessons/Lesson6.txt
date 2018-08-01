@@ -1,0 +1,47 @@
+select *
+From employees
+--where department_id in (10,50,90)
+where  IN('07-FEB-15','29-JAN-13')
+
+select *
+From employees
+where first_name LIKE'S%'
+
+select *
+From employees
+where last_name LIKE'K_n%'
+
+select *
+From employees
+where last_name LIKE'%g
+
+select FIRST_NAME||' '||LAST_NAME as full_name, job_ID, PHONE_NUMBER from employees where PHONE_NUMBER like '6%'
+
+
+select *
+from employees
+ --where COMMISSION_PCT is null
+where COMMISSION_PCT is null and PHONE_NUMBER like '6%'
+and DEPARTMENT_ID like '50' 
+and HIRE_DATE between '01-11-2010'
+and '01-12-2016' order by 6 asc
+
+select *
+from employees
+where DEPARTMENT_ID=60
+--or DEPARTMENT_ID=80
+and SALARY>10000
+
+select *
+from employees
+where DEPARTMENT_ID in (90,80)
+--or DEPARTMENT_ID=80
+and SALARY>10000
+
+select *
+from employees
+where (email like '%T' and employee_id between 100 and 300)
+or (hire_date between '01-JAN-11' and '31-DEC-12'
+and manager_id>100)
+
+

@@ -1,0 +1,68 @@
+--select FIRST_NAME,SALARY,SALARY+300 from EMPLOYEES
+--select FIRST_NAME,SALARY,6*SALARY+300 from EMPLOYEES
+--select FIRST_NAME,SALARY,6*SALARY from EMPLOYEES
+--select FIRST_NAME,SALARY,6*(SALARY+300) from EMPLOYEES
+--select FIRST_NAME,SALARY,(6*SALARY)+300 from EMPLOYEES order by 3 desc
+--select FIRST_NAME AS NAME , JOB_ID, SALARY,COMMISSION_PCT from EMPLOYEES where COMMISSION_PCT is not null
+--select first_name||last_name as name, JOB_ID from employees
+--select first_name||last_name||' is a '||JOB_ID as "epml details" from employees
+describe employees
+
+--select student_id, first_name admission + 2 cource expiry 'from ad_student_details
+
+select student_id, first_name, STUDENT_REG_YEAR + 2 "cource expiry" from ad_student_details
+
+describe
+
+select * from  ad_student_details
+
+select STUDENT_ID, FIRST_NAME, PARENT_ID,STUDENT_REG_YEAR as registration from ad_student_details
+
+select * from ad_exam_details
+select distinct name from ad_exam_details
+
+select STUDENT_ID as "student #", FIRST_NAME as student, PARENT_ID as "parent information", STUDENT_REG_YEAR as "registered on" from ad_student_details
+
+select * from ad_course_details
+
+select COURSE_ID||' , '||'  '||COURSE_NAME as "course ID and Title" from ad_course_details
+
+select * from ad_student_attendance
+select STUDENT_ID, NO_OF_DAYS_OFF from  ad_student_attendance where NO_OF_DAYS_OFF >15
+
+select * from ad_course_details
+
+select COURSE_NAME, DEPARTMENT_ID from ad_course_details where course_ID =199
+
+ select * from ad_exam_results
+ 
+ select STUDENT_ID, marks from ad_exam_results where MARKS not between 65 and 90
+ 
+ 
+ select * from ad_student_details
+ 
+ select STUDENT_ID, FIRST_NAME, STUDENT_REG_YEAR from ad_student_details 
+ where FIRST_NAME like 'ROBERT' or FIRST_NAME like 'NINA' order by STUDENT_REG_YEAR
+ 
+ select STUDENT_ID, FIRST_NAME, STUDENT_REG_YEAR from ad_student_details where FIRST_NAME in "ROBERT", "NINA" order by STUDENT_REG_YEAR
+
+select COURSE_NAME, DEPARTMENT_ID from ad_course_details 
+where DEPARTMENT_ID in 20 or DEPARTMENT_ID in 40 order by COURSE_NAME asc
+
+select STUDENT_ID, marks from ad_exam_results 
+where MARKS between 65 and 90 and course_id like 199 or course_id like 189
+
+--select FIRST_NAME, STUDENT_REG_YEAR from ad_student_details where STUDENT_REG_YEAR like '%14' corect e sa folosim between in loc de like 
+select * from ad_student_details
+
+select FIRST_NAME, PARENT_ID from ad_student_details where EMAIL_ADDR is null
+
+select FIRST_NAME, STUDENT_REG_YEAR, EMAIL_ADDR from ad_student_details 
+where EMAIL_ADDR is not null
+
+select * from ad_student_details
+
+select FIRST_NAME from ad_student_details where FIRST_NAME like '%O%'
+
+
+

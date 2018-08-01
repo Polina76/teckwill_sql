@@ -1,0 +1,53 @@
+Lesson 11--
+
+Select * from employees
+Natural Join jobs
+
+Select * from employees
+join departments
+using (department_id)
+
+select employee_id, last_name, department_id
+from employees join departments 
+using (department_id) 
+
+select department_id
+from employees e
+join departments
+using (department_id)
+
+select e.employee_id, department_id, d.department_name
+from employees e
+join departments d
+using (department_id)
+
+select e.employee_id, e.last_name, e.department_id, d.department_id, d.location_id
+from employees e join departments d
+on (e.department_id = d.department_id)
+
+aflam numele managerului p/u fiecare angajat--
+
+select t1.* 
+from employees t1
+join employees t2
+on t1.manager_id=t2.employee_id
+
+HOMEWORK--14.06.018
+
+select *
+from employees
+
+
+select 
+first_name|| ' '||last_name
+,salary, (12*salary)+100
+from employees
+
+select 
+last_name ||' :1 Month salary = '|| Salary monthly
+from employees
+
+Lesson 11
+
+select * from employees a join job_history b 
+on a.employee_id = b.employee_id-- reprezinta outer left join
